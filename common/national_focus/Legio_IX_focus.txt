@@ -1,0 +1,60 @@
+focus_tree = {
+    id = LEG_focus_tree
+    country = { factor = 0 modifier = { add = 10 tag = LEG } }
+
+    continuous_focus_position = { x = 0 y = 0 } # можно оставить так, если не используешь
+
+    ### Первый фокус — основание Легиона
+    focus = {
+        id = LEG_foundation
+        icon = GFX_goal_generic_political_reform
+        x = 5
+        y = 0
+        cost = 5
+        available = {
+            always = yes
+        }
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.05
+            country_event = { id = legio.100 days = 1 } # твой стартовый ивент
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    ### Второй фокус — военное укрепление
+    focus = {
+        id = LEG_military_reforms
+        icon = GFX_goal_generic_army_doctrine
+        prerequisite = { focus = LEG_foundation }
+        x = 4
+        y = 1
+        cost = 7
+        available = { always = yes }
+        completion_reward = {
+            add_tech_bonus = {
+                name = infantry_bonus
+                bonus = 0.5
+                uses = 1
+                category = infantry_weapons
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    ### Третий фокус — политическая консолидация
+    focus = {
+        id = LEG_political_consolidation
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = LEG_foundation }
+        x = 6
+        y = 1
+        cost = 7
+        available = { always = yes }
+        completion_reward = {
+            add_stability = 0.1
+            add_political_power = 75
+        }
+        ai_will_do = { factor = 1 }
+    }
+}

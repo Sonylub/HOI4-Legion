@@ -1,0 +1,30 @@
+﻿l_english:
+ LEG: "Legio IX"
+ LEG_DEF: "the Legio IX"
+ LEG_ADJ: "Roman"
+
+ LEG_full: "Imperium Romanum Novum"
+
+ # National Focuses
+ LEG_foundation:0 "Rebirth of the Legion"
+ LEG_foundation_desc:0 "The Ninth Legion has returned, against all odds. It is time to reforge discipline and purpose in a world unrecognizable to the old Rome."
+
+ LEG_republic_or_emperor:0 "Republic or Emperor?"
+ LEG_republic_or_emperor_desc:0 "The Legion must choose its destiny: to establish a Roman-style republic or to crown a new imperator."
+
+ LEG_modernize_legions:0 "Modernize the Legions"
+ LEG_modernize_legions_desc:0 "Ancient tactics alone will not win modern wars. By integrating firearms, artillery, and motorized units, we will forge the New Legion."
+
+ LEG_expand_britain:0 "Reclaim Britannia"
+ LEG_expand_britain_desc:0 "The ghost of the Ninth once marched in Britannia. Now, the New Legion may yet return to those shores."
+
+
+ # Events
+ legio.1.t:0 "First Contact"
+ legio.1.d:0 "In Leon, strange warriors dressed like ancient Romans have appeared. Their discipline and rituals astonish the locals."
+ legio.1.a:0 "A new era begins."
+ legio.100.t:0 "The Ninth Legion Awakens"
+ legio.100.d:0 "In the northern provinces of Spain, a disciplined army dressed in ancient Roman attire has emerged. They call themselves the Ninth Legion, long thought lost to history. Locals are astonished by their organization, traditions, and military skill."
+ legio.100.a:0 "Prepare the Legions"
+
+
