@@ -1,16 +1,31 @@
 ideas = {
-	country = {
-		LEG_discipline = {
-			picture = GFX_idea_army_effort
-			allowed = {
-				original_tag = LEG
-			}
-			modifier = {
-				army_morale_factor = 0.05
-				army_org_factor = 0.05
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-			}
-		}
-	}
+    country = {
+        LEG_discipline = {
+            picture = GFX_idea_army_effort
+            allowed = { original_tag = LEG }
+            modifier = {
+                army_morale_factor = 0.05
+                army_org_factor = 0.05
+                army_attack_factor = 0.05
+                army_defence_factor = 0.05
+            }
+        }
+        LEG_isekai_shock = {
+            picture = GFX_idea_generic_crisis
+            allowed = { original_tag = LEG }
+            modifier = {
+                stability_factor = -0.10
+                research_speed_factor = 0.20
+            }
+            removal_trigger = { has_completed_focus = LEG_modernize_weapons }
+        }
+        LEG_roman_pride = {
+            picture = GFX_idea_generic_political_pressure
+            allowed = { original_tag = LEG }
+            modifier = {
+                political_power_gain = 0.10
+                recruitable_population_factor = 0.05
+            }
+        }
+    }
 }

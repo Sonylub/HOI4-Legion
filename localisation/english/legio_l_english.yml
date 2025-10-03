@@ -1,30 +1,71 @@
 ﻿l_english:
- LEG: "Legio IX"
- LEG_DEF: "the Legio IX"
- LEG_ADJ: "Roman"
+  LEG: "Legion IX"
+  LEG_DEF: "Legion IX"
+  LEG_ADJ: "Roman"
+  LEG_full: "Imperium Romanum Novum"
 
- LEG_full: "Imperium Romanum Novum"
+  # National Focuses
+  LEG_foundation:0 "Revival of the Legion"
+  LEG_foundation_desc:0 "I, Aulus Severus, legate of the Ninth Legion, declare: through a time rift, we are transported to this strange world of 1936, in the Posets-Maladeta mountains of Spain. Nearby — an abandoned military warehouse with the barbarians' 'thunder tubes'. We must rally and understand this chaos."
+  
+  LEG_survey_new_world:0 "Survey of the New World"
+  LEG_survey_new_world_desc:0 "Legionaries, hear me, Aulus Severus: these flying iron birds and rumbling chariots frighten, but we are Romans! Send scouts across the Posets-Maladeta mountains to master this isekai."
+  
+  LEG_first_contact:0 "First Contact with Barbarians"
+  LEG_first_contact_desc:0 "As legate, I, Aulus Severus, lead negotiations, but these Spaniards speak a corrupted Latin. Gestures and drawings are our only bridge. We can earn their respect or show Rome's strength."
+  
+  LEG_modernize_weapons:0 "Modernization of Shields and Swords"
+  LEG_modernize_weapons_desc:0 "I, Aulus Severus, have seen our gladii break against bullets. From the warehouse in Posets-Maladeta, take these 'rifles' and train the legionaries. Rome adapts!"
+  
+  LEG_discipline_reforms:0 "Discipline in the New Era"
+  LEG_discipline_reforms_desc:0 "Despite the shock, I, legate Aulus Severus, will strengthen discipline: marches, drills, oaths. We will endure the chaos of this century."
+  
+  LEG_republic_or_emperor:0 "Republic or Emperor?"
+  LEG_republic_or_emperor_desc:0 "As legate, I, Aulus Severus, pose the choice: a republic with a legionary senate or me as emperor for unity in war."
+  
+  LEG_scout_spain:0 "Scouting Spanish Lands"
+  LEG_scout_spain_desc:0 "Legionaries, by my order, Aulus Severus: scout Spain from Posets-Maladeta to the plains. Claim provinces for the New Rome."
+  
+  LEG_prepare_war:0 "Preparation for War"
+  LEG_prepare_war_desc:0 "No room for alliances — only strength! I, Aulus Severus, prepare the legion for total war against the barbarians of Spain."
+  
+  LEG_prepare_campaign:0 "Preparation for the Great Campaign"
+  LEG_prepare_campaign_desc:0 "I, legate Aulus Severus, bolster the ranks: more soldiers, experience. Soon we march."
+  
+  LEG_intervene_spain_war:0 "Intervention in the Spanish War"
+  LEG_intervene_spain_war_desc:0 "Spain is ablaze — our chance! As Aulus Severus, I lead the legion into war against all, to revive the Empire on its ruins."
 
- # National Focuses
- LEG_foundation:0 "Rebirth of the Legion"
- LEG_foundation_desc:0 "The Ninth Legion has returned, against all odds. It is time to reforge discipline and purpose in a world unrecognizable to the old Rome."
+  # Events
+  legio.100.t:0 "Awakening in the New World"
+  legio.100.d:0 "I, Aulus Severus, awaken in the fog: 'Legion, to me! This is not Britain — the Posets-Maladeta mountains, 1936. Nearby a warehouse with barbarian weapons. The time rift has brought us here. Hail Rome!'"
+  legio.100.a:0 "Rally, legionaries!"
+  
+  legio.101.t:0 "Clash of Cultures"
+  legio.101.d:0 "Local peasants in Posets-Maladeta shout in an incomprehensible dialect — a mix of Latin and barbaric. We respond in Latin, but they don't understand. Gestures lead to confusion: one thinks we are gods, another — demons. I, Aulus Severus, decide: peace or sword?"
+  legio.101.a:0 "Attempt peaceful contact (via gestures)"
+  legio.101.b:0 "Show strength (risk conflict)"
+  
+  legio.102.t:0 "Visions of the Emperor"
+  legio.102.d:0 "In a dream, I, Aulus Severus, see Caesar: 'Revive the empire in this world, legate!' This is an omen for the path choice."
+  legio.102.a:0 "Become an empire"
+  legio.102.b:0 "Remain a republic"
+  
+  legio.103.t:0 "Discovery of Modern Weapons"
+  legio.103.d:0 "At the warehouse in Posets-Maladeta, we found 'lightning in tubes'. I, Aulus Severus, ordered: 'Learn to shoot, legionaries! This is our new pilum.'"
+  legio.103.a:0 "Modernize the army"
+  
+  legio.104.t:0 "Call to War"
+  legio.104.d:0 "Spain in civil war — nationalists vs. republicans. I, Aulus Severus, declare: no alliances! The legion wars against all for the New Rome."
+  legio.104.a:0 "War against all!"
 
- LEG_republic_or_emperor:0 "Republic or Emperor?"
- LEG_republic_or_emperor_desc:0 "The Legion must choose its destiny: to establish a Roman-style republic or to crown a new imperator."
+  # Ideas
+  LEG_discipline:0 "Legion Discipline"
+  LEG_discipline_desc:0 "Hardened by centuries of tradition, legionaries possess unyielding discipline that strengthens them in attack and defense."
+  
+  LEG_isekai_shock:0 "Isekai Shock"
+  LEG_isekai_shock_desc:0 "The transfer to a new world causes confusion, but motivates quick adaptation."
+  
+  LEG_roman_pride:0 "Roman Pride"
+  LEG_roman_pride_desc:0 "We are Rome's heirs. This gives us strength in politics and on the battlefield."
 
- LEG_modernize_legions:0 "Modernize the Legions"
- LEG_modernize_legions_desc:0 "Ancient tactics alone will not win modern wars. By integrating firearms, artillery, and motorized units, we will forge the New Legion."
-
- LEG_expand_britain:0 "Reclaim Britannia"
- LEG_expand_britain_desc:0 "The ghost of the Ninth once marched in Britannia. Now, the New Legion may yet return to those shores."
-
-
- # Events
- legio.1.t:0 "First Contact"
- legio.1.d:0 "In Leon, strange warriors dressed like ancient Romans have appeared. Their discipline and rituals astonish the locals."
- legio.1.a:0 "A new era begins."
- legio.100.t:0 "The Ninth Legion Awakens"
- legio.100.d:0 "In the northern provinces of Spain, a disciplined army dressed in ancient Roman attire has emerged. They call themselves the Ninth Legion, long thought lost to history. Locals are astonished by their organization, traditions, and military skill."
- legio.100.a:0 "Prepare the Legions"
-
-
+  POLITICS_AULUS_SEVERUS_DESC:0 "Aulus Severus is the legate of Legio IX Hispana, born in Roman Spain around 80 AD. He served in campaigns against barbarians, distinguished himself in Britain under Agricola. In 121 AD, the legion vanished in the mist — now we know it was a time rift. In 1936, Aulus, a man of iron will and strict discipline, sees in the new world a chance to revive the Roman Empire. His charisma inspires legionaries to adapt to 'barbarian' technologies."

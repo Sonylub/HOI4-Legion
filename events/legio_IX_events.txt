@@ -2,8 +2,114 @@ add_namespace = legio
 
 country_event = {
     id = legio.100
-    title = "legio.1"
-    desc = "legio.1.d"
+    title = "legio.100.t"
+    desc = "legio.100.d"
+    picture = GFX_report_event_generic
+    major = yes
+    fire_only_once = yes
+    trigger = { 
+        tag = LEG
+        has_completed_focus = LEG_foundation  # Срабатывает только после фокуса "Возрождение Легиона"
+    }
+    option = {
+        name = "legio.100.a"
+        add_stability = 0.05
+        add_political_power = 50
+        create_unit_and_place = {
+            template = "Cohors Legionis"
+            amount = 1
+            state = 900
+        }
+    }
+}
+
+country_event = {
+    id = legio.101
+    title = "legio.101.t"
+    desc = "legio.101.d"
+    picture = GFX_report_event_generic
+    fire_only_once = yes
+    trigger = { 
+        tag = LEG
+        has_completed_focus = LEG_first_contact  # Срабатывает только после фокуса "Первый Контакт с Варварами"
+    }
+    option = {
+        name = "legio.101.a"
+        add_stability = 0.10  # Успешный контакт через жесты
+        add_political_power = 20
+    }
+    option = {
+        name = "legio.101.b"
+        add_war_support = 0.10
+        add_political_power = -20  # Конфликт из-за недопонимания
+        stability = -0.05
+    }
+}
+
+country_event = {
+    id = legio.102
+    title = "legio.102.t"
+    desc = "legio.102.d"
+    picture = GFX_report_event_generic
+    fire_only_once = yes
+    trigger = { 
+        tag = LEG
+        has_completed_focus = LEG_republic_or_emperor  # Срабатывает только после фокуса "Республика или Император?"
+    }
+    option = {
+        name = "legio.102.a"
+        set_politics = { ruling_party = despotism }
+        add_war_support = 0.15
+    }
+    option = {
+        name = "legio.102.b"
+        set_politics = { ruling_party = democracy }
+        add_stability = 0.15
+    }
+}
+
+country_event = {
+    id = legio.103
+    title = "legio.103.t"
+    desc = "legio.103.d"
+    picture = GFX_report_event_generic
+    fire_only_once = yes
+    trigger = { 
+        tag = LEG
+        has_completed_focus = LEG_modernize_weapons  # Срабатывает только после фокуса "Модернизация Щитов и Мечей"
+    }
+    option = {
+        name = "legio.103.a"
+        add_tech_bonus = { name = artillery_bonus bonus = 0.3 uses = 1 category = artillery }
+        army_experience = 25
+    }
+}
+
+country_event = {
+    id = legio.104
+    title = "legio.104.t"
+    desc = "legio.104.d"
+    picture = GFX_report_event_generic
+    major = yes
+    fire_only_once = yes
+    trigger = { 
+        tag = LEG
+        has_completed_focus = LEG_intervene_spain_war  # Срабатывает только после фокуса "Вмешательство в Испанскую Войну"
+    }
+    option = {
+        name = "legio.104.a"
+        declare_war_on = { target = SPA }
+        declare_war_on = { target = SPR }
+        add_war_support = 0.20  # Война против всех, без союзов
+    }
+}
+
+add_namespace = legio
+
+country_event = {
+    id = legio.105
+    title = "legio.105.t"
+    desc = "legio.105.d"
     picture = GFX_report_event_generic
     major = yes
     fire_only_once = yes
@@ -11,8 +117,9 @@ country_event = {
         tag = LEG
     }
     option = {
-        name = "Continue"
-        add_stability = 0.05
-        add_political_power = 50
+        name = "legio.105.a"
+        add_stability = 0.03
+        add_political_power = 25
+        add_army_experience = 10
     }
 }
