@@ -12,6 +12,7 @@ focus_tree = {
 	focus = {
 		id = LEG_foundation
 		text = LEG_foundation
+		desc = LEG_foundation_desc
 		icon = GFX_focus_RAJ_the_crown_and_the_world
 		cost = 1.0
 		x = 21
@@ -19,7 +20,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.05
-			add_ideas = LEG_isekai_shock
+			add_ideas = LEG_heritage_ninth
 			country_event = { id = legio.100 days = 1 }
 		}
 		available = { always = yes }
@@ -29,6 +30,7 @@ focus_tree = {
 	focus = {
 		id = LEG_survey_new_world
 		text = LEG_survey_new_world
+		desc = LEG_survey_new_world_desc
 		icon = GFX_focus_AFG_curtail_pashtunwali_primacy
 		cost = 3.0
 		prerequisite = { focus = LEG_foundation }
@@ -48,24 +50,27 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 
+
 	focus = {
 		id = LEG_first_contact
 		text = LEG_first_contact
+		desc = LEG_first_contact_desc
 		icon = GFX_goal_continuous_increase_nu
 		cost = 1.0
 		prerequisite = { focus = LEG_survey_new_world }
 		x = 21
 		y = 2
 		completion_reward = {
-			country_event = { id = legio.101 days = 1 }
-			add_stability = 0.05
+			country_event = { id = legio.102 days = 1 }
 		}
 		ai_will_do = { factor = 1 }
 	}
 
+
 	focus = {
 		id = LEG_modernize_weapons
 		text = LEG_modernize_weapons
+		desc = LEG_modernize_weapons_desc
 		icon = GFX_goal_generic_small_arms
 		cost = 3.0
 		prerequisite = { focus = LEG_first_contact }
@@ -83,35 +88,42 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 	}
 
+
 	focus = {
 		id = LEG_discipline_reforms
 		text = LEG_discipline_reforms
+		desc = LEG_discipline_reforms_desc
 		icon = GFX_focus_AFG_adopt_nufus
 		cost = 3.0
-		prerequisite = { focus = LEG_first_contact }
+		prerequisite = { focus = LEG_modernize_weapons }
 		x = 22
 		y = 3
 		completion_reward = {
 			add_ideas = LEG_discipline
 			army_experience = 30
+			country_event = { id = legio.104 days = 1 }
 		}
 		ai_will_do = { factor = 1 }
 	}
 
+
 	focus = {
 		id = LEG_settle_down
 		text = LEG_settle_down
+		desc = LEG_settle_down_desc
 		icon = GFX_focus_BRA_amazon_colonization
 		cost = 4.0
 		prerequisite = { focus = LEG_modernize_weapons focus = LEG_discipline_reforms }
 		x = 21
 		y = 4
 		completion_reward = {
-			country_event = { id = legio.102 days = 1 }
+			country_event = { id = legio.105 days = 1 }
 			add_ideas = LEG_roman_pride
+			news_event = { id = legio_news.1 days = 1 }
 		}
 		ai_will_do = { factor = 1 }
 	}
+
 
 	focus = {
 		id = LEG_march
