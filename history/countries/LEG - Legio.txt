@@ -25,20 +25,20 @@ set_politics = {
 }
 
 create_country_leader = {
-    name = "Aulus Severus"
-    desc = "POLITICS_AULUS_SEVERUS_DESC"
-    picture = "gfx/leaders/LEG_aulus_severus.tga"
+    name = "Marcus Valens Aelius"
+    desc = "POLITICS_MARCUS_AELIUS_DESC"
+    picture = "LEG_aulus_severus.dds"
     ideology = despotism
     traits = { charismatic }
 }
 
-set_research_slots = 3
-add_ideas = { LEG_discipline }
+set_research_slots = 1
+
 
 create_corps_commander = {
     name = "Marcus Valerius"
     desc = "POLITICS_MARCUS_VALERIUS_DESC"
-    picture = "gfx/leaders/LEG_placeholder_general.tga"
+    picture = "LEG_Marcus_general.dds"
     traits = { infantry_leader }
     skill = 3
     attack_skill = 3
@@ -46,3 +46,55 @@ create_corps_commander = {
     planning_skill = 2
     logistics_skill = 1
 }
+create_corps_commander = {
+    name = "Lucius Cornelius"
+    desc = "POLITICS_LUCIUS_CORNELIUS_DESC"
+    picture = "LEG_Lucius_general.dds"
+    traits = { offensive_doctrine }
+    skill = 4
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 2
+}
+create_corps_commander = {
+    name = "Gaius Julius Varro"
+    desc = "POLITICS_GAIUS_JULIUS_VARRO_DESC"
+    picture = "LEG_Lucius_general.dds"
+    traits = { defensive_doctrine }
+    skill = 3
+    attack_skill = 2
+    defense_skill = 4
+    planning_skill = 3
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+    name = "Titus Flavius Severus"
+    desc = "POLITICS_TITUS_FLAVIUS_SEVERUS_DESC"
+    picture = "LEG_Titus_general.dds"
+    traits = { logistics_wizard }
+    skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 4
+}
+
+create_corps_commander = {
+    name = "Publius Aelius Scaeva"
+    desc = "POLITICS_PUBLIUS_AELIUS_SCAEVA_DESC"
+    picture = "LEG_Publius_general.dds"
+    traits = { brilliant_strategist }
+    skill = 4
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 4
+    logistics_skill = 2
+}
+
+recruit_character = LEG_stability_advisor
+recruit_character = LEG_pp_advisor
+recruit_character = LEG_army_theorist
+recruit_character = LEG_production_advisor
+recruit_character = LEG_diplomat

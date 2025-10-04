@@ -23,3 +23,52 @@ news_event = {
         name = legio_news.1.default
     }
 }
+
+news_event = {
+    id = legio_news.2
+    title = "legio_news.2.t"
+    desc = "legio_news.2.d"
+    picture = GFX_report_event_generic
+    major = yes
+    fire_only_once = yes
+
+    option = {
+        trigger = { tag = GER }
+        name = "legio_news.2.ger"
+        add_political_power = 25
+    }
+    option = {
+        trigger = { tag = SOV }
+        name = "legio_news.2.sov"
+        add_stability = -0.05
+    }
+    option = {
+        trigger = { NOT = { OR = { tag = GER tag = SOV } } }
+        name = "legio_news.1.default"
+    }
+}
+
+news_event = {
+	id = legio_news.3
+	title = "legio_news.3.t"
+	desc = "legio_news.3.d"
+	picture = GFX_report_event_generic_war
+	major = yes
+	fire_only_once = yes
+
+	option = {
+		name = "legio_news.3.a"
+		trigger = { tag = SPR }
+		add_stability = -0.05
+	}
+	option = {
+		name = "legio_news.3.b"
+		trigger = { tag = SPA }
+		add_stability = -0.05
+	}
+	option = {
+		name = "legio_news.3.c"
+		trigger = { NOT = { OR = { tag = SPR tag = SPA } } }
+	}
+}
+

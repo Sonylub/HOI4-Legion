@@ -132,3 +132,115 @@ country_event = {
         add_political_power = 25
     }
 }
+
+country_event = {
+    id = legio.106
+    title = "legio.106.t"
+    desc = "legio.106.d"
+    picture = GFX_report_event_generic
+    major = yes
+    fire_only_once = yes
+    trigger = {
+        tag = LEG
+        has_completed_focus = LEG_march
+    }
+    option = {
+        name = "legio.106.a"
+        add_stability = 0.05
+        add_war_support = 0.10
+        add_political_power = 25
+		transfer_state = 1018
+        transfer_state = 1019
+    }
+}
+
+country_event = {
+    id = legio.107
+    title = "legio.107.t"
+    desc = "legio.107.d"
+    picture = GFX_report_event_generic
+    major = yes
+    fire_only_once = yes
+    trigger = {
+        tag = LEG
+        has_completed_focus = LEG_Huesco
+    }
+
+    option = {
+        name = "legio.107.a"
+        add_stability = 0.05
+        add_political_power = 25
+        add_war_support = 0.05
+
+        # 🏗️ Укрепления в регионе Уэска
+        6901 = { add_building_construction = { type = bunker level = 2 instant_build = yes } }
+        13225 = { add_building_construction = { type = bunker level = 2 instant_build = yes } }
+
+        add_ideas = LEG_heritage_ninth
+    }
+}
+
+country_event = {
+    id = legio.108
+    title = "legio.108.t"
+    desc = "legio.108.d"
+    picture = GFX_report_event_generic
+    major = yes
+    fire_only_once = yes
+
+    trigger = {
+        tag = LEG
+        has_completed_focus = LEG_prepare_campaign
+    }
+
+    option = {
+        name = "legio.108.a"
+        add_manpower = 30000
+        load_oob = LEG_oob   # <-- Загружаем отдельный OOB-файл
+
+        # ✈️ Добавляем 200 самолётов
+        add_equipment_to_stockpile = { type = fighter amount = 200 producer = LEG }
+
+        # 📰 Запускаем мировой новостной ивент
+        news_event = { id = legio_news.1 days = 1 }
+    }
+}
+country_event = {
+	id = legio.109
+	title = "legio.109.t"
+	desc = "legio.109.d"
+	picture = GFX_report_event_war
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		tag = LEG
+		has_completed_focus = LEG_intervene_spain_war
+	}
+
+	option = {
+		name = "legio.109.a"
+		
+		# Автоматическое вступление в войну против обеих сторон
+		declare_war_on = { target = SPR type = annex_everything }
+		declare_war_on = { target = D01 type = annex_everything }
+
+		# Получаем все корки Испании
+		every_owned_state = {
+			limit = { is_owned_and_controlled_by = SPR }
+			add_core_of = LEG
+		}
+		every_state = {
+			limit = { is_core_of = SPR }
+			add_core_of = LEG
+		}
+
+		add_ideas = LEG_fire_of_war
+		add_political_power = 50
+		add_war_support = 0.10
+		add_stability = 0.05
+		add_tension = 15
+
+		news_event = { id = legio_news.3 days = 1 }
+	}
+}
+

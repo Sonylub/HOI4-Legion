@@ -1,4 +1,4 @@
-focus_tree = { 
+focus_tree = {
 	id = LEG_focus_tree
 	country = {
 		factor = 0
@@ -8,180 +8,251 @@ focus_tree = {
 		}
 	}
 	default = no
-
 	focus = {
 		id = LEG_foundation
 		text = LEG_foundation
-		desc = LEG_foundation_desc
 		icon = GFX_focus_RAJ_the_crown_and_the_world
-		cost = 1.0
+		cost = 1,00
 		x = 21
 		y = 0
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.05
-			add_ideas = LEG_heritage_ninth
-			country_event = { id = legio.100 days = 1 }
-		}
-		available = { always = yes }
-		ai_will_do = { factor = 1 }
-	}
+			desc = LEG_foundation_desc
+			completion_reward = {
+					add_political_power = 50
+					add_stability = 0.05
+					add_ideas = LEG_heritage_ninth
+					country_event = {
+							id = legio.100
+							days = 1
+						}
+				}
+			available = {
+					always = yes
+				}
+			ai_will_do = {
+					factor = 1
+				}
 
+	}
 	focus = {
 		id = LEG_survey_new_world
 		text = LEG_survey_new_world
-		desc = LEG_survey_new_world_desc
 		icon = GFX_focus_AFG_curtail_pashtunwali_primacy
-		cost = 3.0
-		prerequisite = { focus = LEG_foundation }
+		cost = 3,00
+		prerequisite = {
+			focus = LEG_foundation
+		}
 		x = 21
 		y = 1
-		completion_reward = {
-			add_tech_bonus = {
-				name = recon_bonus
-				bonus = 0.5
-				uses = 1
-				category = recon
-			}
-			army_experience = 20
-			country_event = { id = legio.101 days = 1 }
-		}
-		available = { always = yes }
-		ai_will_do = { factor = 1 }
+			desc = LEG_survey_new_world_desc
+			completion_reward = {
+					add_tech_bonus = {
+							name = recon_bonus
+							bonus = 0.5
+							uses = 1
+							category = recon
+						}
+					army_experience = 20
+					country_event = {
+							id = legio.101
+							days = 1
+						}
+				}
+			available = {
+					always = yes
+				}
+			ai_will_do = {
+					factor = 1
+				}
+
 	}
-
-
 	focus = {
 		id = LEG_first_contact
 		text = LEG_first_contact
-		desc = LEG_first_contact_desc
 		icon = GFX_goal_continuous_increase_nu
-		cost = 1.0
-		prerequisite = { focus = LEG_survey_new_world }
+		cost = 1,00
+		prerequisite = {
+			focus = LEG_survey_new_world
+		}
 		x = 21
 		y = 2
-		completion_reward = {
-			country_event = { id = legio.102 days = 1 }
-		}
-		ai_will_do = { factor = 1 }
+			desc = LEG_first_contact_desc
+			completion_reward = {
+					country_event = {
+							id = legio.102
+							days = 1
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+
 	}
-
-
 	focus = {
 		id = LEG_modernize_weapons
 		text = LEG_modernize_weapons
-		desc = LEG_modernize_weapons_desc
 		icon = GFX_goal_generic_small_arms
-		cost = 3.0
-		prerequisite = { focus = LEG_first_contact }
+		cost = 3,00
+		prerequisite = {
+			focus = LEG_first_contact
+		}
 		x = 20
 		y = 3
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_bonus
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
-			country_event = { id = legio.103 days = 1 }
-		}
-		ai_will_do = { factor = 1 }
+			desc = LEG_modernize_weapons_desc
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_bonus
+							bonus = 0.5
+							uses = 1
+							category = infantry_weapons
+						}
+					country_event = {
+							id = legio.103
+							days = 1
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+
 	}
-
-
 	focus = {
 		id = LEG_discipline_reforms
 		text = LEG_discipline_reforms
-		desc = LEG_discipline_reforms_desc
 		icon = GFX_focus_AFG_adopt_nufus
-		cost = 3.0
-		prerequisite = { focus = LEG_modernize_weapons }
+		cost = 3,00
+		prerequisite = {
+			focus = LEG_first_contact
+		}
 		x = 22
 		y = 3
-		completion_reward = {
-			add_ideas = LEG_discipline
-			army_experience = 30
-			country_event = { id = legio.104 days = 1 }
-		}
-		ai_will_do = { factor = 1 }
+			desc = LEG_discipline_reforms_desc
+			completion_reward = {
+					add_ideas = LEG_discipline
+					army_experience = 30
+					country_event = {
+							id = legio.104
+							days = 1
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+
 	}
-
-
 	focus = {
 		id = LEG_settle_down
 		text = LEG_settle_down
-		desc = LEG_settle_down_desc
 		icon = GFX_focus_BRA_amazon_colonization
-		cost = 4.0
-		prerequisite = { focus = LEG_modernize_weapons focus = LEG_discipline_reforms }
+		cost = 4,00
+		prerequisite = {
+			focus = LEG_discipline_reforms
+		}
+		prerequisite = {
+			focus = LEG_modernize_weapons
+		}
 		x = 21
 		y = 4
-		completion_reward = {
-			country_event = { id = legio.105 days = 1 }
-			add_ideas = LEG_roman_pride
-			news_event = { id = legio_news.1 days = 1 }
-		}
-		ai_will_do = { factor = 1 }
+			desc = LEG_settle_down_desc
+			completion_reward = {
+					country_event = {
+							id = legio.105
+							days = 1
+						}
+					add_ideas = LEG_roman_pride
+					news_event = {
+							id = legio_news.1
+							days = 1
+						}
+				}
+			ai_will_do = {
+					factor = 1
+				}
+
 	}
-
-
 	focus = {
-		id = LEG_march
-		text = LEG_march
-		icon = GFX_focus_AFG_mountain_training
+		id = LEG_civilwar_awaiting
+		text = LEG_civilwar_awaiting
+		desc = LEG_civilwar_awaiting_desc
+		icon = GFX_focus_spr_masters_of_our_own_fate
 		cost = 10.0
 		prerequisite = { focus = LEG_settle_down }
 		x = 21
 		y = 5
-		completion_reward = {
-			add_claim_on = { target = SPA states = { 789 790 } }
-		}
 		ai_will_do = { factor = 1 }
 	}
+	focus = {
+		id = LEG_march
+		text = LEG_march
+		desc = LEG_march_desc
+		icon = GFX_focus_AFG_mountain_training
+		cost = 3.0
+		prerequisite = { focus = LEG_civilwar_awaiting }
+		x = 21
+		y = 6
 
+		available = {
+			has_global_flag = spanish_civil_war
+		}
+
+		completion_reward = {
+			set_country_flag = LEG_march_unlocked
+		}
+
+		ai_will_do = { factor = 1 }
+	}
 	focus = {
 		id = LEG_Huesco
 		text = LEG_Huesco
+		desc = LEG_Huesco_desc
 		icon = GFX_focus_hol_the_foundations_of_defense
 		cost = 1.0
 		prerequisite = { focus = LEG_march }
 		x = 21
-		y = 6
+		y = 7
+
 		completion_reward = {
 			add_war_support = 0.10
 			army_experience = 40
+			country_event = { id = legio.107 days = 1 }
 		}
+
 		ai_will_do = { factor = 1 }
 	}
 
 	focus = {
 		id = LEG_prepare_campaign
 		text = LEG_prepare_campaign
+		desc = LEG_prepare_campaign_desc
 		icon = GFX_goal_generic_allies_build_infantry
 		cost = 3.0
 		prerequisite = { focus = LEG_Huesco }
 		x = 21
-		y = 7
+		y = 8
+
 		completion_reward = {
-			army_experience = 50
-			add_manpower = 5000
+			country_event = { id = legio.108 days = 1 }
 		}
+
 		ai_will_do = { factor = 1 }
 	}
-
 	focus = {
 		id = LEG_intervene_spain_war
 		text = LEG_intervene_spain_war
+		desc = LEG_intervene_spain_war_desc
 		icon = GFX_goal_generic_attack_allies
-		cost = 2.0
+		cost = 2.00
 		prerequisite = { focus = LEG_prepare_campaign }
 		x = 21
-		y = 8
-		completion_reward = {
-			country_event = { id = legio.104 days = 1 }
-			declare_war_on = { target = SPA }
-			declare_war_on = { target = SPR }
+		y = 9
+
+		available = {
+			has_global_flag = spanish_civil_war
 		}
+
+		completion_reward = {
+			set_country_flag = LEG_intervene_spain_war_done
+			country_event = { id = legio.109 days = 1 }
+		}
+
 		ai_will_do = { factor = 1 }
 	}
-}

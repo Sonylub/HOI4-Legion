@@ -40,6 +40,21 @@ ideas = {
     }
 }
 
-
-
+ideas = {
+	country = {
+		LEG_fire_of_war = {
+			picture = GFX_idea_generic_military
+			allowed = { original_tag = LEG }
+			modifier = {
+				division_speed = 0.75
+				army_org_regain = 0.50
+				air_support_mission_efficiency = 0.75
+				army_attack_factor = 0.90
+				air_strategic_bombing_factor = 0.15
+			}
+		}
+	}
 }
+
+
+

@@ -1,0 +1,97 @@
+characters = {
+    # Советник по стабильности (политический слот)
+    LEG_stability_advisor = {
+        name = "Quintus Fabius Maximus"
+        desc = "POLITICS_QUINTUS_FABIUS_DESC"
+        portraits = {
+            civilian = {
+                small = "GFX_portrait_LEG_quintus_advisor.tga"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = leg_stability_advisor
+            traits = { stability_expert }
+            cost = 150
+            available = { always = yes }
+            on_add = { add_stability = 0.05 }
+        }
+    }
+
+    # Советник по политической власти (политический слот)
+    LEG_pp_advisor = {
+        name = "Appius Claudius Crassus"
+        desc = "POLITICS_APPIUS_CLAUDIUS_DESC"
+        portraits = {
+            civilian = {
+                small = "GFX_portrait_LEG_appius_advisor.tga"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = leg_pp_advisor
+            traits = { power_broker }
+            cost = 150
+            available = { always = yes }
+            on_add = { add_political_power = 50 }
+        }
+    }
+
+    # Теоретик по армии (research слот)
+    LEG_army_theorist = {
+        name = "Sextus Julius Frontinus"
+        desc = "POLITICS_SEXTUS_JULIUS_DESC"
+        portraits = {
+            army = {
+                small = "GFX_portrait_LEG_sextus_advisor.tga"
+            }
+        }
+        advisor = {
+            slot = theorist
+            idea_token = leg_army_theorist
+            ledger = army
+            traits = { military_theorist }
+            cost = 150
+            available = { has_tech = infantry_weapons }
+            on_add = { add_research_slot = 1 }
+        }
+    }
+
+    # Советник по производству (экономический слот)
+    LEG_production_advisor = {
+        name = "Lucius Licinius Lucullus"
+        desc = "POLITICS_LUCIUS_LICINIUS_DESC"
+        portraits = {
+            civilian = {
+                small = "GFX_portrait_LEG_lucullus_advisor.tga"
+            }
+        }
+        advisor = {
+            slot = political_advisor  # Можно изменить на custom слот, если добавишь в ideas
+            idea_token = leg_production_advisor
+            traits = { industrial_genius }
+            cost = 150
+            available = { has_idea = basic_machine_tools }
+            on_add = { consumer_goods_factories = -5 }
+        }
+    }
+
+    # Дипломатический советник (политический слот)
+    LEG_diplomat = {
+        name = "Gnaeus Pompeius Magnus"
+        desc = "POLITICS_GNAEUS_POMPEIUS_DESC"
+        portraits = {
+            civilian = {
+                small = "GFX_portrait_LEG_pompeius_advisor.tga"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = leg_diplomat
+            traits = { diplomatic_genius }
+            cost = 150
+            available = { neutrality > 50 }
+            on_add = { improve_relations = { target = GER who = ROOT } }
+        }
+    }
+}

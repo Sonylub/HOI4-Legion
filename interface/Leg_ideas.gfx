@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_LEG_heritage_ninth"
+		texturefile = "gfx/interface/ideas/idea_ITA_new_roman_empire_ns.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LEG_discipline"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LEG_roman_pride"
+		texturefile = "gfx/interface/ideas/FRA_national_mobilization_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LEG_fire_of_war"
+		texturefile = "gfx/interface/ideas/idea_generic_fascism_drift_2.dds"
+}
