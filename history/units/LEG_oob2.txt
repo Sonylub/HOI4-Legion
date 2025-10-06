@@ -1,0 +1,99 @@
+### ================================================================
+### LEG_oob_catalonia.txt — Каталонские когорты Девятого Легиона
+### ================================================================
+
+division_template = {
+    name = "Cohors Legionis"
+    priority = 1
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+    }
+    support = {
+        recon = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+        engineer = { x = 0 y = 2 }
+    }
+}
+
+units = {
+    # --- Первые три, символические дивизии ---
+    division = {
+        name = "I Cohors Barcinonensis"
+        location = 6927
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.45
+        start_equipment_factor = 0.85
+    }
+
+    division = {
+        name = "II Cohors Tarraconensis"
+        location = 6966
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.35
+        start_equipment_factor = 0.8
+    }
+
+    division = {
+        name = "III Cohors Catalana"
+        location = 9764
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.75
+    }
+
+    # --- Новые 6 дивизий, усиление Каталонского фронта ---
+    division = {
+        name = "IV Cohors Barcinonum"
+        location = 9764
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.75
+    }
+
+    division = {
+        name = "V Cohors Pyrenaea"
+        location = 9764
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.35
+        start_equipment_factor = 0.8
+    }
+
+    division = {
+        name = "VI Cohors Montis"
+        location = 9764
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.7
+    }
+
+    division = {
+        name = "VII Cohors Hispano-Catalana"
+        location = 9764
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.4
+        start_equipment_factor = 0.8
+    }
+
+    division = {
+        name = "VIII Cohors Augusta Nova"
+        location = 9764
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.25
+        start_equipment_factor = 0.7
+    }
+
+    division = {
+        name = "IX Cohors Libertatis"
+        location = 9764
+        division_template = "Cohors Legionis"
+        start_experience_factor = 0.45
+        start_equipment_factor = 0.85
+    }
+}

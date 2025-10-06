@@ -11,11 +11,11 @@ set_technology = {
 }
 
 set_popularities = {
-        democratic = 0
-        communism = 0 
-        fascism = 0
-        neutrality = 100
-    }
+    democratic = 0
+    communism = 0
+    fascism = 0
+    neutrality = 100
+}
 
 set_politics = {
     ruling_party = neutrality
@@ -32,8 +32,9 @@ create_country_leader = {
     traits = { charismatic }
 }
 
-set_research_slots = 1
+set_research_slots = 2
 
+# ======= Генералы =======
 
 create_corps_commander = {
     name = "Marcus Valerius"
@@ -60,7 +61,7 @@ create_corps_commander = {
 create_corps_commander = {
     name = "Gaius Julius Varro"
     desc = "POLITICS_GAIUS_JULIUS_VARRO_DESC"
-    picture = "LEG_Lucius_general.dds"
+    picture = "LEG_Gaius_general.dds"
     traits = { defensive_doctrine }
     skill = 3
     attack_skill = 2
@@ -68,7 +69,6 @@ create_corps_commander = {
     planning_skill = 3
     logistics_skill = 2
 }
-
 create_corps_commander = {
     name = "Titus Flavius Severus"
     desc = "POLITICS_TITUS_FLAVIUS_SEVERUS_DESC"
@@ -80,7 +80,6 @@ create_corps_commander = {
     planning_skill = 2
     logistics_skill = 4
 }
-
 create_corps_commander = {
     name = "Publius Aelius Scaeva"
     desc = "POLITICS_PUBLIUS_AELIUS_SCAEVA_DESC"
@@ -93,8 +92,11 @@ create_corps_commander = {
     logistics_skill = 2
 }
 
-recruit_character = LEG_stability_advisor
-recruit_character = LEG_pp_advisor
-recruit_character = LEG_army_theorist
-recruit_character = LEG_production_advisor
-recruit_character = LEG_diplomat
+# ======= Советники =======
+
+recruit_character = LEG_lucius_aemilius
+recruit_character = LEG_marcus_tullius
+recruit_character = LEG_gaius_julius
+recruit_character = LEG_quintus_fabius
+recruit_character = LEG_titus_flavius
+recruit_character = LEG_publius_scipio

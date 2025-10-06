@@ -22,7 +22,7 @@ units = {
     division = {
         name = "I Cohors Valens"
         location = 9840
-        division_template = "Legio IX Cohort"
+        division_template = "Cohors Legionis"
         start_experience_factor = 0.4
         start_equipment_factor = 0.8
     }
@@ -30,7 +30,7 @@ units = {
     division = {
         name = "II Cohors Hispania"
         location = 9840
-        division_template = "Legio IX Cohort"
+        division_template = "Cohors Legionis"
         start_experience_factor = 0.3
         start_equipment_factor = 0.8
     }
@@ -38,7 +38,7 @@ units = {
     division = {
         name = "III Cohors Nova"
         location = 9840
-        division_template = "Legio IX Cohort"
+        division_template = "Cohors Legionis"
         start_experience_factor = 0.25
         start_equipment_factor = 0.7
     }

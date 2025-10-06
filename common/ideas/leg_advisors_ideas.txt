@@ -1,0 +1,65 @@
+ideas = {
+    # Lucius Aemilius (PP + stability, как leftist_freemason)
+    LEG_lucius_aemilius = {
+        picture = GFX_portrait_generic_europe_1
+        default = no
+        visible = yes
+        allowed = { tag = LEG }
+        political_power = 0.10
+        stability = 0.05
+        allowed_advisor_slot = political_advisor
+    }
+
+    # Marcus Tullius (relations + PP gain, как backroom_backstabber)
+    LEG_marcus_tullius = {
+        picture = GFX_portrait_generic_europe_2
+        default = no
+        visible = yes
+        allowed = { tag = LEG }
+        improve_relations = 0.10
+        political_power_gain = 0.05
+        allowed_advisor_slot = political_advisor
+    }
+
+    # Gaius Julius (attack + war support, как gran_carabinero)
+    LEG_gaius_julius = {
+        picture = GFX_portrait_generic_europe_3
+        default = no
+        visible = yes
+        allowed = { tag = LEG }
+        division_attack = 0.05
+        war_support = 0.05
+        allowed_advisor_slot = political_advisor
+    }
+
+    # Quintus Fabius (stability + compliance, как voice_of_restraint)
+    LEG_quintus_fabius = {
+        picture = GFX_portrait_generic_europe_4
+        default = no
+        visible = yes
+        allowed = { tag = LEG }
+        stability = 0.10
+        daily_compliance_gain = 0.02
+        allowed_advisor_slot = political_advisor
+    }
+
+    # Titus Flavius (logistics, как army_logistics_2)
+    LEG_titus_flavius = {
+        picture = GFX_idea_generic_army_europe_5
+        default = no
+        visible = yes
+        allowed = { tag = LEG }
+        supply_efficiency = 0.10
+        allowed_advisor_slot = high_command
+    }
+
+    # Publius Scipio (morale/defense, как army_chief_morale_2)
+    LEG_publius_scipio = {
+        picture = GFX_idea_generic_army_europe_6
+        default = no
+        visible = yes
+        allowed = { tag = LEG }
+        division_defense = 0.05
+        allowed_advisor_slot = army_chief
+    }
+}

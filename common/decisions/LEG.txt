@@ -21,3 +21,43 @@ Legion_category = {
 		}
 	}
 }
+
+
+Roma_category = {
+
+    LEG_form_new_spanish_republic = {
+        icon = GFX_goal_generic_political_reform
+        cost = 50
+        days_remove = 1
+		fire_only_once = yes
+        allowed = {
+            tag = LEG
+            has_completed_focus = LEG_the_new_spanish_republic
+        }
+
+        visible = {
+            tag = LEG
+            has_completed_focus = LEG_the_new_spanish_republic
+        }
+
+        available = {
+            owns_state = 41
+            controls_state = 41
+        }
+
+        complete_effect = {
+            set_country_flag = LEG_new_republic_formed
+            set_country_name = "New Roman Republic"
+            set_country_adjective = "Испанск"
+            set_country_definite_form = "New Roman Republic"
+            set_capital = 41
+            set_cosmetic_tag = LEG_NEW_SPAIN
+			custom_effect_tooltip = form_newroman_coring_states_tt
+            set_color = { 0.8 0.0 0.0 } # Красный
+
+            add_political_power = 150
+            add_stability = 0.1
+            add_war_support = 0.05
+        }
+    }
+}

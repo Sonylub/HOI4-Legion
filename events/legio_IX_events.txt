@@ -76,6 +76,7 @@ country_event = {
         add_equipment_to_stockpile = { type = infantry_equipment amount = 640 }
         add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 40 }
         add_equipment_to_stockpile = { type = support_equipment amount = 120 }
+		load_oob = "LEG_oobst"
     }
 }
 
@@ -244,3 +245,301 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = legio.110
+	title = "legio.110.t"
+	desc = "legio.110.d"
+	picture = GFX_report_event_generic
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		has_completed_focus = LEG_Barcelona
+		tag = LEG
+	}
+
+	option = {
+		name = "legio.110.a"
+
+		# Идея автономии
+		add_ideas = LEG_idea_Catalan_Autonomy
+
+		# Повышение поддержки
+		add_stability = 0.05
+		add_war_support = 0.10
+		add_political_power = 50
+
+		# Спавн дивизий из OOB
+		load_oob = "LEG_oob2"
+
+		# Новостной ивент
+		news_event = { id = legio_news.4 days = 1 }
+	}
+}
+
+country_event = {
+    id = legio.111
+    title = legio.111.t
+    desc = legio.111.d
+    picture = GFX_report_event_attack
+    is_triggered_only = yes
+
+    trigger = {
+        has_completed_focus = LEG_zaragoza_push
+    }
+
+    immediate = {
+        log = "Легион IX начал наступление на Сарагосу. Новые силы вступают в бой."
+        load_oob = "LEG_oob3"
+    }
+
+    option = {
+        name = legio.111.a
+        ai_chance = { factor = 1 }
+        add_political_power = 50
+        add_stability = 0.05
+        add_war_support = 0.05
+        add_named_threat = { threat = 5 name = legio.111.t }
+    }
+}
+
+country_event = {
+	id = legio.112
+	title = legio.112.t
+	desc = legio.112.d
+	picture = GFX_report_event_supply_depot
+	is_triggered_only = yes
+
+	option = {
+		name = legio.112.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = legio.113
+	title = legio.113.t
+	desc = legio.113.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = legio.113.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+country_event = {
+	id = legio.114
+	title = legio.114.t
+	desc = legio.114.d
+	picture = GFX_report_event_air_force
+	is_triggered_only = yes
+
+	option = {
+		name = legio.114.a
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = legio.115
+	title = legio.115.t
+	desc = legio.115.d
+	picture = GFX_report_event_political_turmoil
+	is_triggered_only = yes
+
+	option = {
+		name = legio.115.a
+		add_stability = -0.03
+		add_political_power = 25
+	}
+}
+
+country_event = {
+    id = legio.116
+    title = legio.116.t
+    desc = legio.116.d
+    picture = GFX_report_event_diplomacy
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    trigger = { }
+
+    option = {
+        name = legio.116.a
+        ai_chance = { base = 95 }
+
+        if = {
+            limit = { SPD = { exists = yes } }
+
+            # Перенос только unit leaders (генералов) из SPD
+            SPD = {
+                every_unit_leader = {
+                    set_nationality = ROOT
+                    set_original_tag = LEG
+                }
+            }
+
+            # Аннексия с troops
+            annex_country = {
+                target = SPD
+                transfer_troops = yes
+            }
+
+            # Дополнительные генералы (create, как раньше)
+            create_corps_commander = {
+                name = "Gaius F. Valens"
+                picture = "gfx/leaders/LEG_Marcus_general.tga"
+                traits = { organizer }
+                skill = 4
+                attack_skill = 3
+                defense_skill = 4
+                planning_skill = 3
+                logistics_skill = 4
+            }
+            create_corps_commander = {
+                name = "Marcus Tarraco"
+                picture = "gfx/leaders/LEG_Marcus_general.tga"
+                traits = { defensive_doctrine }
+                skill = 3
+                attack_skill = 2
+                defense_skill = 4
+                planning_skill = 3
+                logistics_skill = 3
+            }
+
+            # Tech bonuses
+            complete_research = { id = "smallarms_basic" }
+            complete_research = { id = "fighter_engine_basic" }
+            add_tech_bonus = {
+                bonus = 0.10
+                uses = 3
+                categories = { land_doctrine }
+            }
+
+            # Political effects
+            add_popularity = { ideology = democratic popularity = 0.15 }
+            add_timed_idea = { idea = LEG_peace_guarantees days = 720 }
+            add_stability = 0.10
+            add_war_support = -0.05
+            add_political_power = -50
+
+            news_event = { id = legio_news.5 days = 1 }
+            log = "legio.116: integrated SPD and enhanced Roman legions"
+        }
+
+        else = {
+            add_political_power = 25
+            add_stability = -0.02
+            news_event = { id = legio_news.5 days = 1 }
+            log = "legio.116: no SPD tag found - fallback executed"
+        }
+    }
+}
+
+country_event = {
+	id = legio.120
+	title = legio.120.t
+	desc = legio.120.d
+	picture = GFX_report_event_generic_war
+	is_triggered_only = yes
+
+	option = {
+		name = legio.120.a
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = legio.121
+	title = legio.121.t
+	desc = legio.121.d
+	picture = GFX_report_event_political
+	is_triggered_only = yes
+
+	option = {
+		name = legio.121.a
+		add_popularity = { ideology = democratic popularity = 0.10 }
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = legio.122
+	title = legio.122.t
+	desc = legio.122.d
+	picture = GFX_report_event_parliament
+	is_triggered_only = yes
+
+	option = {
+		name = legio.122.a
+		add_political_power = 50
+		add_popularity = { ideology = democratic popularity = 0.10 }
+	}
+}
+
+# events/legio_events.txt
+country_event = {
+	id = legio.123
+	title = legio.123.t
+	desc = legio.123.d
+	picture = GFX_report_event_constitution
+	is_triggered_only = yes
+
+	option = {
+		name = legio.123.a
+
+		# Меняем официальную политику страны
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+
+		add_popularity = { ideology = democratic popularity = 0.15 }
+		add_stability = 0.05
+
+		# Пробуем прямой способ: изменить идеологию текущего лидера
+		# (должно работать в современных версиях HOI4).
+		set_country_leader_ideology = democratic
+
+		# Проверяем — если лидер действительно сменил идеологию, всё готово.
+		# Иначе — делаем надёжный фоллбэк: retire + create_country_leader.
+		if = {
+			limit = { has_country_leader_ideology = democratic } # проверочный триггер
+			# можно поставить флаг, лог или новости — по желанию
+			set_country_flag = legio_constitution_leader_ok
+		}
+		else = {
+			# Удаляем старого лидера (retire — безопаснее, чем kill)
+			retire_country_leader = yes
+
+			# Создаём лидера с тем же именем/портретом, но с нужной идеологией
+			create_country_leader = {
+				name = "Marcus Valens Aelius"
+				desc = "POLITICS_MARCUS_AELIUS_DESC"
+				picture = "LEG_aulus_severus.dds"
+				ideology = democratic
+				expire = "1965.1.1"
+				traits = { charismatic }
+			}
+			# (после create_country_leader новый лидер становится представителем партии)
+		}
+	}
+}
+
+
+
+country_event = {
+	id = legio.124
+	title = legio.124.t
+	desc = legio.124.d
+	picture = GFX_report_event_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = legio.124.a
+		add_stability = 0.10
+		add_political_power = 150
+	}
+}

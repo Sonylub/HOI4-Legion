@@ -58,3 +58,69 @@ ideas = {
 
 
 
+ideas = {
+	country = {
+		LEG_idea_Catalan_Autonomy = {
+			allowed = { original_tag = LEG }
+			picture = GFX_idea_generic_political_reform
+			modifier = {
+				stability_factor = 0.05
+				local_resources_factor = 0.10
+				industry_repair_factor = 0.10
+				army_speed_factor = 0.15
+				army_org_recovery_factor = 0.10
+				local_manpower = 0.10
+			}
+		}
+	}
+}
+
+ideas = {
+	LEG_republic_tensions = {
+		picture = GFX_idea_generic_political_pressure
+		allowed = { original_tag = LEG }
+		modifier = {
+			stability_factor = -0.05
+			political_power_gain = 0.05
+			drift_defence_factor = 0.2
+		}
+	}
+}
+
+ideas = {
+	LEG_new_republic = {
+		picture = GFX_idea_generic_democracy
+		allowed = { original_tag = LEG }
+		modifier = {
+			stability_factor = 0.10
+			conscription_factor = -0.05
+			political_power_gain = 0.10
+			drift_defence_factor = 0.25
+			war_support_factor = -0.05
+		}
+
+
+	}
+}
+
+ideas = {
+	LEG_final_push_buff = {
+		picture = GFX_idea_generic_army
+		allowed = { original_tag = LEG }
+		removal_cost = -1
+		modifier = {
+			attack_bonus_against = {
+				target = SPR
+				attack = 0.15   # +30% атака против SPR
+			}
+			planning_speed = 0.25
+			army_attack_factor = 0.15
+			army_speed_factor = 0.10
+			war_support_factor = 0.05
+		}
+	}
+}
+
+
+
+

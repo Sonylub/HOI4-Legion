@@ -1,0 +1,3 @@
+graphical_culture = generic
+graphical_culture_2d = generic_2d
+color = { 139 0 0 }

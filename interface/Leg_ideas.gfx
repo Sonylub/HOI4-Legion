@@ -14,4 +14,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_LEG_fire_of_war"
 		texturefile = "gfx/interface/ideas/idea_generic_fascism_drift_2.dds"
+	spriteType = {
+		name = "GFX_idea_LEG_idea_Catalan_Autonomy"
+		texturefile = "gfx/interface/ideas/SOV_scientist_defect.dds"
+	}
 }
+
+

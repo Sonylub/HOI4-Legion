@@ -1,97 +1,123 @@
 characters = {
-    # Советник по стабильности (политический слот)
-    LEG_stability_advisor = {
-        name = "Quintus Fabius Maximus"
-        desc = "POLITICS_QUINTUS_FABIUS_DESC"
-        portraits = {
-            civilian = {
-                small = "GFX_portrait_LEG_quintus_advisor.tga"
-            }
-        }
-        advisor = {
-            slot = political_advisor
-            idea_token = leg_stability_advisor
-            traits = { stability_expert }
-            cost = 150
-            available = { always = yes }
-            on_add = { add_stability = 0.05 }
-        }
-    }
 
-    # Советник по политической власти (политический слот)
-    LEG_pp_advisor = {
-        name = "Appius Claudius Crassus"
-        desc = "POLITICS_APPIUS_CLAUDIUS_DESC"
-        portraits = {
-            civilian = {
-                small = "GFX_portrait_LEG_appius_advisor.tga"
-            }
-        }
-        advisor = {
-            slot = political_advisor
-            idea_token = leg_pp_advisor
-            traits = { power_broker }
-            cost = 150
-            available = { always = yes }
-            on_add = { add_political_power = 50 }
-        }
-    }
+    # Lucius Aemilius (аналог Augusto Barcia Trelles: leftist/political bonuses)
+	LEG_lucius_aemilius = {
+		name = "Lucius Aemilius Paullus"
+		portraits = {
+			army = {
+				small = "GFX_portrait_generic_europe_1"  # Generic римский; замени на кастом
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LEG_lucius_aemilius
+			allowed = { tag = LEG }
+			visible = yes  # Всегда visible
+			available = yes  # Всегда available
+			traits = { silent_workhorse }  # Аналог leftist_freemason: PP/stability
+			cost = 150
+			ai_will_do = { base = 1.000 }
+		}
+	}
 
-    # Теоретик по армии (research слот)
-    LEG_army_theorist = {
-        name = "Sextus Julius Frontinus"
-        desc = "POLITICS_SEXTUS_JULIUS_DESC"
-        portraits = {
-            army = {
-                small = "GFX_portrait_LEG_sextus_advisor.tga"
-            }
-        }
-        advisor = {
-            slot = theorist
-            idea_token = leg_army_theorist
-            ledger = army
-            traits = { military_theorist }
-            cost = 150
-            available = { has_tech = infantry_weapons }
-            on_add = { add_research_slot = 1 }
-        }
-    }
+    # Marcus Tullius (аналог Diego Martinez Barrio: intrigue/relations)
+	LEG_marcus_tullius = {
+		name = "Marcus Tullius Cicero"
+		portraits = {
+			army = {
+				small = "GFX_portrait_generic_europe_2"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LEG_marcus_tullius
+			allowed = { tag = LEG }
+			visible = yes
+			available = yes
+			traits = { backroom_backstabber }  # Аналог backroom: relations/PP gain
+			cost = 150
+			ai_will_do = { base = 1.000 }
+		}
+	}
 
-    # Советник по производству (экономический слот)
-    LEG_production_advisor = {
-        name = "Lucius Licinius Lucullus"
-        desc = "POLITICS_LUCIUS_LICINIUS_DESC"
-        portraits = {
-            civilian = {
-                small = "GFX_portrait_LEG_lucullus_advisor.tga"
-            }
-        }
-        advisor = {
-            slot = political_advisor  # Можно изменить на custom слот, если добавишь в ideas
-            idea_token = leg_production_advisor
-            traits = { industrial_genius }
-            cost = 150
-            available = { has_idea = basic_machine_tools }
-            on_add = { consumer_goods_factories = -5 }
-        }
-    }
+    # Gaius Julius (аналог Juan Negrin: army/war support)
+	LEG_gaius_julius = {
+		name = "Gaius Julius Caesar"
+		portraits = {
+			army = {
+				small = "GFX_portrait_generic_europe_3"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LEG_gaius_julius
+			allowed = { tag = LEG }
+			visible = yes
+			available = yes
+			traits = { ideological_crusader }  # Аналог gran_carabinero: attack/war support
+			cost = 150
+			ai_will_do = { base = 1.000 }
+		}
+	}
 
-    # Дипломатический советник (политический слот)
-    LEG_diplomat = {
-        name = "Gnaeus Pompeius Magnus"
-        desc = "POLITICS_GNAEUS_POMPEIUS_DESC"
-        portraits = {
-            civilian = {
-                small = "GFX_portrait_LEG_pompeius_advisor.tga"
-            }
-        }
-        advisor = {
-            slot = political_advisor
-            idea_token = leg_diplomat
-            traits = { diplomatic_genius }
-            cost = 150
-            available = { neutrality > 50 }
-            on_add = { improve_relations = { target = GER who = ROOT } }
-        }
-    }
+    # Quintus Fabius (аналог Indalecio Prieto: stability/compliance)
+	LEG_quintus_fabius = {
+		name = "Quintus Fabius Maximus"
+		portraits = {
+			army = {
+				small = "GFX_portrait_generic_europe_4"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LEG_quintus_fabius
+			allowed = { tag = LEG }
+			visible = yes
+			available = yes
+			traits = { voice_of_restraint }  # Прямой аналог: stability/compliance
+			cost = 150
+			ai_will_do = { base = 1.000 }
+		}
+	}
+
+    # Titus Flavius (аналог Antonio Escobar Huerta: army logistics, high_command)
+	LEG_titus_flavius = {
+		name = "Titus Flavius Vespasianus"
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_5"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = LEG_titus_flavius
+			ledger = army
+			allowed = { tag = LEG }
+			visible = yes
+			available = yes
+			traits = { army_logistics_2 }  # Прямой аналог: supply efficiency
+			cost = 150
+		}
+	}
+
+    # Publius Scipio (аналог Domenec Batet: army chief morale)
+	LEG_publius_scipio = {
+		name = "Publius Cornelius Scipio"
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_6"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = LEG_publius_scipio
+			ledger = army
+			allowed = { tag = LEG }
+			visible = yes
+			available = yes
+			traits = { army_chief_morale_2 }  # Прямой аналог: defense/morale
+			cost = 150
+		}
+	}
+
 }
